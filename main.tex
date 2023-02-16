@@ -1,0 +1,159 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+
+\title{Numerical Problem Solving}
+\author{Ashton Fritz}
+\date{February 2023}
+
+\begin{document}
+
+\maketitle
+
+\section*{Numerical Problem solving}
+\section{Introduction}
+
+\section{Sampling and data}
+
+\section{Differentiation}
+\subsection{Forward Difference}
+In both the sciences and mathematics being able to take a derivative is essential as not everything has functions that can be easily found. For instance imagine a object that has a sensor to measure how much distance it has traveled. A sensor for velocity may also be possible to attach but it is not needed as we can use the position and time data to determine the velocity.The mathematical definition of a derivative is given by: 
+\begin{equation}
+\lim_{h\to 0} \frac{f(x+h)-f(x)}{h} = \frac{df(x)}{dx} 
+\end{equation}
+Although analytically h can approach 0 but in reality you can never have an infinitesimally small amount of time between two measurements and as a result the limit can be approximated as: 
+\begin{equation}
+\frac{f(x+\delta)-f(x)}{\delta} \approx \frac{df(x)}{dx} 
+\end{equation} 
+with $\delta$ being a perturbation of the measurement. That perturbation is typically the time step if measured with respect to time. This is the first numerical derivative we will look at called \textbf{forward difference}. Forward difference will require at least one point \emph{ahead} of the current point to calculate the derivative.
+
+\subsection{Backwards Difference}
+Like with \textbf{forward difference} we can define a derivative using the point \emph{behind} the current point rather than the current point. This can be visualized by replacing \emph{x} with \emph{x - $\delta$} and when it is simplified the equation becomes the following:
+
+\begin{equation}
+\frac{f(x)-f(x-\delta)}{\delta} \approx \frac{df(x)}{dx} 
+\end{equation} 
+\\
+This numerical derivative called the \textbf{backwards difference} only requires the previous point and the current value meaning that it can only start on the second value measured and not the first unlike \emph{forward difference}.
+
+\subsection{Centred difference}
+With \emph{backwards} and \emph{forward} difference 2 points but the error can be reduced by using more points to calculate the derivative. Taking \emph{backwards difference} and \emph{forward difference}, adding them and dividing by two we can derive the centred difference.
+\begin{equation}
+\frac{f(x+\delta)-f(x)}{2\delta} + \frac{f(x)-f(x-\delta)}{2\delta} = \frac{f(x+\delta)-f(x-\delta)}{2\delta} \approx \frac{df(x)}{dx}
+\end{equation} 
+This assumes $\delta$ is for an evenly spaced time step for this version of forward difference which may be different elsewhere. The \textbf{centred difference} has less error however it requires a point on either side of the current value. Taking the value at the previous time step and the next time step we can calculate the numerical derivative at the current time step.
+
+\section{Integration}
+
+\section{Convolutions}
+
+\section{Numerical Linear Algebra}
+
+\section{Solving Coupled Ordinary Differential Equations}
+
+\subsection{Euler's Method}
+
+\subsection{Runge Kutta methods}
+
+\subsection{Leapfrog method}
+
+\section{Non-linear Equations}
+
+\section{Transforms}
+
+\subsection{Z-transform}
+
+\subsection{Fourier transform}
+
+\subsection{Laplace transform}
+
+\section{Artificial Neural Networks}
+
+\section{Simulations}
+
+
+\section*{Optimization}
+
+\section{Math for optimization}
+
+\subsection{Group theory}
+
+\subsection{Lie theory}
+
+\subsection{Topology}
+
+\subsection{Statistics and probability}
+
+\newpage % May need to move as more info is added it is just to show all sections currently
+
+\section{Physics}
+
+\subsection{Quantum mechanics}
+
+\subsection{Electricity and Magnetism basics}
+
+\subsection{Solid state Physics}
+
+\subsection{Thermal dynamics}
+
+\subsection{Fluid dynamics}
+
+\section{Circuits}
+
+\subsection{Basic circuit and components}
+
+\subsection{Non-linear components}
+
+\subsection{Active components}
+
+\subsection{Digital electronics}
+
+\section{The Digital Computer} 
+
+\subsection{Computer Architecture}
+
+\subsection{Computer Graphics}
+
+\section{Non-digital computers}
+
+\subsection{Quantum computing basics}
+
+\subsection{Optical computing basics}
+
+\section{Visualizing data}
+
+\newpage
+
+\section*{Problems for practice}
+
+\section{Chaos Theory}
+
+\section{Biology}
+
+\section{Chemistry}
+
+\section{Physics}
+
+\section{Material Science}
+
+\section{Economics}
+
+\section{Current Areas of Research}
+
+\subsection{Explanation}
+As of today these problem require a massive amount of computational power and as a result you will not be likely able to implement a larger scale one, however, simplified ones would work.
+
+\subsection{Bonding of Hydrogen}
+
+\subsection{Solving resistor values for basic circuit}
+
+\subsection{Fluid flow and the Navier-Stokes equation}
+
+\subsection{Capacitor design}
+
+\subsection{Procession of Mercury}
+
+\subsection{Analyzing the stress of materials and simulating it}
+
+
+\end{document}
